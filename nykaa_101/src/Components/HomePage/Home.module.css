@@ -1,0 +1,23 @@
+.main{
+    z-index: -1;
+}
+
+.CategoryDiv{
+    text-align: left;
+    margin: 5vh 5vh 5vh 5vh;
+    margin-top: 70px;
+    border:0px solid green;  
+}
+
+.CategoryDiv>h1{
+    font-size: 5vh;
+    font-weight: 650;
+    margin-top: 5px;
+}
+
+.CategoryDiv>h4{
+    font-size: 3.2vh;
+    font-weight: 620;
+    color: #5c6873;
+    margin-top: 5px;
+}

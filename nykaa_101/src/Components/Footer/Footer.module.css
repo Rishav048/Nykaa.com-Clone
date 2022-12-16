@@ -4,8 +4,9 @@
     justify-content: center; 
     background: #3f414d;
      padding-top: 20px;
-    border:2px solid red;
+    border:0px solid red;
     gap: 100px;
+    
 }
 .MainBox>div{
     height: 19vh;
