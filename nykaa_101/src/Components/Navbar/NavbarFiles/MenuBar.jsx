@@ -26,7 +26,7 @@ const MenuBar =()=>{
 <p>Sindoor</p>
 </Link>
           </div>
-          <div>
+          <div  style={{background:"#f7f7f7"}} >
           <Link to="/product">
 <h1 className={style.MenuH1} >Kajal</h1>
 <p>Eyeliner</p>  
@@ -66,6 +66,40 @@ const MenuBar =()=>{
 <p>Nail Polish Remover</p>
 </Link>
           </div>
+
+<div style={{background:"#f7f7f7"}} >
+<Link to="/product">
+<h1 className={style.MenuH1} >Tools & Brushes</h1> 
+<p>Face Brush</p>
+ <p>Eye Brush</p>
+<p>Brush Sets</p>
+<p>Brush Cleaners</p>
+<p>Sponges & Applicators</p>
+<p>Eyelash Curlers</p>
+<p>Tweezers</p>
+<p>Sharpeners</p>
+<p>Mirrors</p>
+
+<h1 className={style.MenuH1} >Makeup Pouches</h1>    
+<p>Multi-Functional Makeup Palettes</p>
+</Link>
+</div>  
+
+<div>
+<Link to="/product">
+
+<h1 className={style.MenuH1} >Top Brands</h1> 
+<p>Kay Beauty</p>
+ <p>Huda Beauty</p>
+<p>Charlotte Tilbury</p>
+<p>M.A.C</p>
+<p>Maybelline New York</p>
+<p>L'Oreal Paris</p>
+<p>Lakme</p>
+<p>Nykaa Cosmetics</p>
+<p>Nyx Pro.Makeup</p>
+</Link>
+</div>  
         </div>
      </div>
         

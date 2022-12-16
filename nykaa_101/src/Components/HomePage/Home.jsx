@@ -5,6 +5,8 @@ import Corousels from "../GlobalComponent/Corosouls";
 import Style from "./Home.module.css"
 import {TopBrands,OnlyAtNykaa,ShortCardData,FeaturedBrands,EverydayEssentials} from "./DataArray";
 import {Cards, ShortCards,ShortCards1} from "./Cards"
+import { Face } from "../Face/Face";
+import Main from "../Face/database";
 
 import {SimpleGrid,Divider} from "@chakra-ui/react"
 
@@ -12,6 +14,8 @@ import {SimpleGrid,Divider} from "@chakra-ui/react"
 
 
 const Home =()=>{
+
+ 
     return(
         <>
       <Navbar />
@@ -22,8 +26,9 @@ const Home =()=>{
       <h4>Today’s Top Offers</h4>
       <Corousels />
       <Divider />
+     
       </div>
-
+      
       <div style={{display:"flex", width:"90%", margin:"auto", gap:"3vh" , height:"300px" ,border:"0px solid blue" , marginBottom:"3vh"}} >
         <div style={{height:"100%" , width:"50%", borderRadius:"4px"  }} > <img src="https://images-static.nykaa.com/uploads/ce3cbd44-60db-4d85-994c-6322442cc736.gif?tr=w-600,cm-pad_resize" alt="one"  style={{height:"100%" , width:"100%"}} />  </div>
         <div style={{height:"100%" , width:"50%", borderRadius:"4px"  }} > <img src="https://images-static.nykaa.com/uploads/c437ef70-6d68-46aa-be73-e686c8cd9c6a.jpg?tr=w-600,cm-pad_resize" alt="two" style={{height:"100%" , width:"100%"}}  />  </div>
@@ -96,6 +101,9 @@ const Home =()=>{
 
 </div>
     <Footer /> 
+    <Main />
+
+    <Face  />
 
         </>
         
