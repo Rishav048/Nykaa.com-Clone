@@ -34,11 +34,11 @@ const Navbar =()=>{
               alt="nykka"
             />
            
-           <Link to="/" className={style.pTags} > <p>Categories</p></Link>
-           <Link to="/" className={style.pTags} > <p>Brands</p></Link>
-           <Link to="/" className={style.pTags}  >  <p>Luxe</p></Link>
-           <Link to="/" className={style.pTags} >  <p>Cosmetic+ Fashion</p></Link>
-           <Link to="/" className={style.pTags} >  <p>Beauty Advice</p></Link>
+           <Link to="/" className={style.pTags} ><p>Categories</p></Link>
+           <Link to="/" className={style.pTags} ><p>Brands</p></Link>
+           <Link to="/" className={style.pTags} ><p>Luxe</p></Link>
+           <Link to="/" className={style.pTags} ><p>Cosmetic+ Fashion</p></Link>
+           <Link to="/" className={style.pTags} ><p>Beauty Advice</p></Link>
             
           </div>
           <div>
