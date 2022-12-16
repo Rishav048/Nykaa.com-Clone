@@ -1,7 +1,9 @@
 import React, { useState,useEffect } from 'react'
 import style from "./Navbar.module.css"
 import {SearchIcon} from "@chakra-ui/icons";
+import {ButtonGroup,Button} from "@chakra-ui/react"
 import { Link } from 'react-router-dom';
+import {FaWeightHanging} from "@react-icons/all-files/fa/FaWeightHanging"
 
 
 const Navbar =()=>{
@@ -23,7 +25,7 @@ const Navbar =()=>{
       
        </div>
             <div className={style.Card}>
-          <div>
+          <div >
             <img
               style={{cursor:"pointer" ,width:"90px" , height:"52px" }}
              
@@ -31,11 +33,13 @@ const Navbar =()=>{
               className={style.card4}
               alt="nykka"
             />
-            <p>Categories</p>
-            <p>Brands</p>
-            <p>Luxe</p>
-            <p>Cosmetic+ Fashion</p>
-            <p>Beauty Advice</p>
+           
+           <Link to="/" className={style.pTags} > <p>Categories</p></Link>
+           <Link to="/" className={style.pTags} > <p>Brands</p></Link>
+           <Link to="/" className={style.pTags}  >  <p>Luxe</p></Link>
+           <Link to="/" className={style.pTags} >  <p>Cosmetic+ Fashion</p></Link>
+           <Link to="/" className={style.pTags} >  <p>Beauty Advice</p></Link>
+            
           </div>
           <div>
             <div className={style.inputContainer}>
@@ -51,12 +55,17 @@ const Navbar =()=>{
               />
             </div>
             <div className={style.card2}>
-              
+              <Link to="/SignIn">
+            <ButtonGroup gap='2'>
+           <Button colorScheme='pink'>Sign Up</Button>
+          </ButtonGroup>
+          </Link>
            
             </div>
             <div className={style.card3}>
-              
-               
+            <Link  to="/cart" >
+            <FaWeightHanging />
+            </Link>
             </div>
           </div>
         </div>

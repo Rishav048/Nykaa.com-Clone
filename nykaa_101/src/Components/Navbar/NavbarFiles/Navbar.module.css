@@ -1,4 +1,8 @@
 
+
+
+
+
 .firstsubContainer{
     display: flex;
     width: 100%;
@@ -22,12 +26,14 @@
     color: #ebe4e4;
 }
 
-
-
 .container{
-    /* position: fixed; */
-    width: 100vw;
-    margin-top: 0px;
+    border:2px solid blue;
+    top:0;
+    bottom: 0;
+    position: sticky;
+    z-index: 100;
+    width:100%;
+    
 } 
 .Card{
     display: flex;
@@ -77,15 +83,91 @@
     height: 12vh;
     color: white;
      cursor:pointer; 
+     
 }
-.card4~p{
+.pTags>p{
     font-weight: 600;
 }
-.card4~p:hover{
-     color: #fc3581;
-     cursor: pointer;
-}  
+ 
+
+.pTags>p:hover{
+    color: #fc3581;
+    cursor: pointer;
+}
+
+
 .content{
    
     width: 100vw;
 }
+
+.dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdowncontent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdowncontent a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdowncontent {display: block;}
+  
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+  .main_menuContainer{
+    display: flex;
+    height: 500px;
+  }
+  .main_menuContainer>div{
+    text-align: left;
+    margin-left: 10px;
+    height: 100%;
+    width: 200px;
+  }
+  .main_menuContainer>div>p{
+    font-weight: 600;
+    font-size: larger;
+    line-height:0.3px;
+    
+    
+  }
+
+  .MenuH1{
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .MenuH1~p{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .MenuH1~p:hover{
+    color: #fc3581;
+    cursor: pointer;
+  }
