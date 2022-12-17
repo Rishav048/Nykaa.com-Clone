@@ -1,0 +1,44 @@
+
+.MainDiv{
+    width: 100%;
+    height: auto ;
+    border: 1px solid red;
+    background-color:#f3f3f3;
+}
+
+.heading{
+   
+    font-size: 4.5vh;
+    font-weight: 620;
+    margin-top: 5px;
+    display: inline;
+    
+}
+
+.Container{
+    border: 2px solid blueviolet;
+    height: auto;
+    width: 90%;
+    margin: auto;
+    display: flex;
+    border-right: 7px;
+}
+
+.sidediv{
+  flex: 3;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.productdiv{
+    flex: 7;
+    height: 100%;
+    border: 1px solid yellowgreen;
+   
+}
+
+.fixedsidediv{
+    height: 800px;
+    width: 100%;
+    background-color: aqua;
+}
