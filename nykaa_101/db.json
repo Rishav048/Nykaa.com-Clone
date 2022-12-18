@@ -603,5 +603,40 @@
       "n_reviews": 506,
       "id": 54
     }
+  ],
+  "Cart": [
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nylagrl000033-a_1.png",
+      "tags": "BESTSELLER",
+      "name": "L.A. Girl Pro Conceal HD",
+      "price": 695,
+      "discount": 0,
+      "rating": 4.3,
+      "n_ratings": 24794,
+      "n_reviews": 8575,
+      "id": 6
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/a/8af2903NYKAC00000165_1.jpg",
+      "tags": "FEATURED",
+      "name": "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
+      "price": 599,
+      "discount": 0,
+      "rating": 4.3,
+      "n_ratings": 1102,
+      "n_reviews": 506,
+      "id": 1
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/l/a/lakm_-absolute-blur-perfect-makeup-primer.jpg",
+      "tags": "FEATURED",
+      "name": "Lakme Absolute Blur Perfect Makeup Primer",
+      "price": 750,
+      "discount": 0,
+      "rating": 4.4,
+      "n_ratings": 1405,
+      "n_reviews": 721,
+      "id": 2
+    }
   ]
 }

@@ -8,7 +8,7 @@ const MenuBar =()=>{
       <div class={style.dropdowncontent}>
         <div className={style.main_menuContainer} >
           <div>
-<Link to="/product">
+<Link to="/face">
 <h1 className={style.MenuH1} >Face</h1>
 <p>Face Primer</p>
  <p>Concealer</p>
@@ -27,7 +27,7 @@ const MenuBar =()=>{
 </Link>
           </div>
           <div  style={{background:"#f7f7f7"}} >
-          <Link to="/product">
+          <Link to="/face">
 <h1 className={style.MenuH1} >Kajal</h1>
 <p>Eyeliner</p>  
  <p>Mascara</p>
@@ -48,7 +48,7 @@ const MenuBar =()=>{
 </Link>
           </div>
           <div>
-<Link to="/product">
+<Link to="/face">
 <h1 className={style.MenuH1} >Lips</h1>         
 
 <p>Lipstick</p>
@@ -68,7 +68,7 @@ const MenuBar =()=>{
           </div>
 
 <div style={{background:"#f7f7f7"}} >
-<Link to="/product">
+<Link to="/face">
 <h1 className={style.MenuH1} >Tools & Brushes</h1> 
 <p>Face Brush</p>
  <p>Eye Brush</p>
@@ -86,7 +86,7 @@ const MenuBar =()=>{
 </div>  
 
 <div>
-<Link to="/product">
+<Link to="/face">
 
 <h1 className={style.MenuH1} >Top Brands</h1> 
 <p>Kay Beauty</p>

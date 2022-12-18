@@ -1,0 +1,44 @@
+
+
+.container{
+    width: 18vw;
+    background-color: white;
+    border-radius: 5px;
+     border:0px solid black;
+     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.add_to_bag{
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    cursor: pointer;
+    border:0px solid blue;
+    cursor: pointer;
+}
+.add_to_bag>:first-child{
+    width: 30%;
+    height: 100%;
+    border-top: 1px solid lightgrey;
+    border:0px solid green;
+}
+.add_to_bag>:first-child>img{
+    height: 45px;
+    border:0px solid red;
+}
+.add_to_bag>:last-child{
+    width: 70%;
+    height: 6vh;
+    background-color: rgb(252,40,122);
+    border:0px solid yelow;
+   
+}
+.add_to_bag>:last-child>h3{
+    color: white;
+    margin-top: 10px;
+}
+
+
+
+
