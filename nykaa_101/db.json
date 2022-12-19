@@ -606,19 +606,51 @@
   ],
   "Cart": [
     {
-      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/f/b/fb07b598901030583629_1.jpg",
-      "tags": "FEATURED",
-      "name": "Lakme Complexion Care Face CC Cream",
-      "price": 297,
-      "s_price": 349,
-      "discount": 15,
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/5/0/5005c32773602590674_0.jpg",
+      "tags": "",
+      "name": "M.A.C Studio Fix Fluid SPF 15 Mini",
+      "price": 1750,
+      "discount": 0,
       "rating": 4.4,
-      "n_ratings": 27996,
-      "n_reviews": 6706,
-      "id": 8
+      "n_ratings": 3477,
+      "n_reviews": 1854,
+      "id": 10
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/7/3/739429a773602345830_rv__1.jpg",
+      "tags": "",
+      "name": "M.A.C Prep + Prime Fix+",
+      "price": 1950,
+      "discount": 0,
+      "rating": 4.5,
+      "n_ratings": 10634,
+      "n_reviews": 3004,
+      "id": 9
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/8/a/8af2903NYKAC00000165_1.jpg",
+      "tags": "FEATURED",
+      "name": "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
+      "price": 599,
+      "discount": 0,
+      "rating": 4.3,
+      "n_ratings": 1102,
+      "n_reviews": 506,
+      "id": 1
     }
   ],
-  "LogIn": {
-    
-  }
+  "LogIn": [
+    {
+      "name": "Rishav",
+      "email": "rishav@gmail.com",
+      "password": "1234",
+      "id": 1
+    },
+    {
+      "name": "abhinandan",
+      "email": "abhi@gmail.com",
+      "password": "1234",
+      "id": 2
+    }
+  ]
 }

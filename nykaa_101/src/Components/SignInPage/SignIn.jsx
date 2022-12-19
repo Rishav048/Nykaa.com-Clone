@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { AuthContext } from "../AuthContext/AuthContext";
+
 
 import {
     Modal,
@@ -19,10 +19,10 @@ import {
 const SignIn =()=>{
     
             const { isOpen, onOpen, onClose } = useDisclosure()  
-            const {loginName} = useContext(AuthContext)
+           
             return(
                 <>
-                <Button colorScheme='pink'  onClick={onOpen}>{loginName}</Button>
+                <Button colorScheme='pink'  onClick={onOpen}>Sign In</Button>
                 <Modal size="xl" closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay />
                   <ModalContent>

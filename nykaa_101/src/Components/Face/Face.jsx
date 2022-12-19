@@ -45,7 +45,7 @@ const {GetCartItems} = useContext(AuthContext)
 // For adding the data to CART
 const postData= async(item)=>{
 try{
-  let res = await fetch (`http://localhost:3000/Cart`,{
+  let res = await fetch (`https://rishavbacked.onrender.com/Cart`,{
     method:"POST",
     body:JSON.stringify(item),
     headers:{
@@ -90,7 +90,7 @@ catch(e){
   const GetData = async()=>{
  try{
   setLoading(true)
-   let res = await fetch(`http://localhost:3000/products?_page=${page}&_limit=${Limit}&_sort=${sortAccording}&_order=${sorting}`);
+   let res = await fetch(`https://rishavbacked.onrender.com/products?_page=${page}&_limit=${Limit}&_sort=${sortAccording}&_order=${sorting}`);
    let data = await res.json();
 
    console.log(data)
@@ -111,7 +111,7 @@ catch(e){
 
   const ForTotalpage = async()=>{
     try{
-      let res = await fetch(`http://localhost:3000/products`);
+      let res = await fetch(`https://rishavbacked.onrender.com/products`);
       let dataP = await res.json();
    
       console.log(dataP)

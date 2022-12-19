@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./ProductCard.module.css"
-//import Rating from "@mui/material/Rating";
+// import Rating from "@mui/material/Rating";
 import {Stack} from "@chakra-ui/react";
 import { Toastadded } from "./Toast_addTocart";
 
@@ -73,7 +73,7 @@ const  ProductCard =({tags,image_url,name,price,discount,rating,n_ratings,addedT
                 marginLeft: "2vw",
                 color: "grey",
                 textAlign: "center",
-                border:"1px solid blue",
+                border:"0px solid blue",
                 display:"inline"
               }}
             >

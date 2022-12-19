@@ -5,7 +5,7 @@ import SignIn from "../SignInPage/SignIn";
 import Payment from "../Payment/Payment";
 import Face from "../Face/Face";
 import Thankx from "../Payment/Thankx";
-
+import LogInComponent from "../SignInPage/Login";
 
 
 const AllRoutes =()=>{
@@ -17,6 +17,7 @@ const AllRoutes =()=>{
         <Route   path="/payment"  element={< Payment />}  ></Route>
          <Route path="/face" element={<Face />} ></Route>
          <Route path="/thanks" element={<Thankx />} ></Route>
+         <Route path="/login"  element={<LogInComponent />} ></Route>
        </Routes>
     )
 }

@@ -1,4 +1,6 @@
-import { useState, useContext } from "react";
+import { useState, useEffect,useContext } from "react";
+import { Link , useNavigate } from "react-router-dom";
+import { AuthContext } from "../AuthContext/AuthContext";
 
 import {
   Flex,
@@ -10,7 +12,6 @@ import {
   InputLeftElement,
   chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
   FormHelperText,
@@ -21,54 +22,77 @@ import { FaUserAlt, FaLock } from "react-icons/fa";
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
 
-const LoginObj = {
-    name:"",
+const LoginCheck = {
     email: "",
     password: ""
 }
 
 
-const SignInForm = () => {
+const LogInComponent = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleShowClick = () => setShowPassword(!showPassword);
 
-  const [postLogin , setPostlogin] = useState(LoginObj);
+  const [ myDetails , setmyDetails] = useState(LoginCheck);
+  const [ logincheckdetails , setlogincheckdetails] = useState([]);
 
 
+  const {changeAuth,ChangeMyname } = useContext(AuthContext)
+
+
+
+
+
+ const Navigate = useNavigate()
+
+ useEffect(()=>{
+    CheckLoginDetails();
+ },[])
 
 
 
    const handleMyInput = (e)=>{
-    setPostlogin({...postLogin,[e.target.name]:e.target.value})
+    setmyDetails({...myDetails,[e.target.name]:e.target.value})
    }
 
    const hangleSubmitlogin = (e)=>{
        e.preventDefault();
-       console.log(postLogin)
-       PostLoginDetails(postLogin);
+
+       var flag = false;
+     
+       logincheckdetails.filter((el)=>{
+         if(el.email === myDetails.email  &&  el.password === myDetails.password){
+            flag = true;
+            ChangeMyname(el.name)
+         }
+        
+       })
+
+       if(flag){
+         console.log("done");
+         changeAuth();
+         return  Navigate("/") 
+       }
+       else{
+        setmyDetails(LoginCheck)
+        alert ("Wrong Credentials")
+       }
+
+       console.log(myDetails);
        
-       setPostlogin(LoginObj)
    }
 
-  const PostLoginDetails = async(postLogin)=>{
+
+  const CheckLoginDetails = async()=>{
     try{
-        let res = await fetch(`https://rishavbacked.onrender.com/LogIn`,{
-            method:"POST",
-            body:JSON.stringify(postLogin),
-            headers: {
-              "content-type":"application/json"
-            },
-          });
+        let res = await fetch(`https://rishavbacked.onrender.com/LogIn`);
           let data = await res.json();
-          console.log("Login Data" , data)
+          console.log("Fetch Login Data" , data);
+          setlogincheckdetails(data)   
     }
     catch(e){
         console.log(e)
     }
   }
-
-
-
 
   return (
     <Flex
@@ -95,26 +119,14 @@ const SignInForm = () => {
               backgroundColor="whiteAlpha.900"
               boxShadow="md"
             >
-                 <FormControl>
-                <InputGroup>
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<CFaUserAlt color="pink" />}
-                  />
-                  <Input name="name"  value={postLogin.name}  onChange={handleMyInput}    type="text" placeholder="Full Name" />
-                </InputGroup>
-              </FormControl>
-
-
-
-
+                
               <FormControl>
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents="none"
                     children={<CFaUserAlt color="pink" />}
                   />
-                  <Input name="email"  value={postLogin.email}  onChange={handleMyInput}    type="email" placeholder="email address" />
+                  <Input name="email"  value={myDetails.email}  onChange={handleMyInput}    type="email" placeholder="email address" />
                 </InputGroup>
               </FormControl>
               <FormControl>
@@ -125,7 +137,7 @@ const SignInForm = () => {
                     children={<CFaLock color="pink" />}
                   />
                   <Input
-                    name="password"  value={postLogin.password}  onChange={handleMyInput} 
+                    name="password"  value={myDetails.password}  onChange={handleMyInput} 
                     type={showPassword ? "text" : "password"}
                     placeholder="Password"
                   />
@@ -146,20 +158,14 @@ const SignInForm = () => {
                 colorScheme="pink"
                 width="full"
               >
-                Sign Up
+                Login
               </Button>
             </Stack>
           </form>
         </Box>
       </Stack>
-      <Box>
-      Already a user?{" "}
-        <Link color="blue" href="/login">
-          Log in
-        </Link>
-      </Box>
     </Flex>
   );
 };
 
-export default SignInForm;
+export default LogInComponent;

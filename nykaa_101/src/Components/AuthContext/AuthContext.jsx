@@ -9,12 +9,18 @@ const AuthContextProvider = ({children})=>{
  const [cartitems , setCartItems] = useState([]);
  const [totalPrice , setTotaLPrice] = useState(0);
  const [discountPrice , setdiscountPrice] = useState(0);
- const [loginName , setLoginName] = useState("Sign In");
+ const [isAuth , setisAuth] = useState(false);
+ const [Myname , setMyname] = useState("");
 
-
-const NameChange = (val)=>{
-  setLoginName(val)
+const ChangeMyname = (name)=>{
+  setMyname(name)
 }
+
+
+
+ const changeAuth =()=>{
+  setisAuth(true)
+ }
 
 
 
@@ -36,7 +42,7 @@ const TotalPricecount = (mydata)=>{
 
  const GetCartItems = async()=>{
     try{
-      let res = await fetch(`http://localhost:3000/cart`);
+      let res = await fetch(`https://rishavbacked.onrender.com/Cart`);
       let data = await res.json();
       console.log("Cart",data)
       setCartItems(data);
@@ -59,7 +65,7 @@ const TotalPricecount = (mydata)=>{
 
    const RemoveData = async(id)=>{
    try{
-      let res = await fetch(`http://localhost:3000/cart/${id}`,{
+      let res = await fetch(`https://rishavbacked.onrender.com/Cart/${id}`,{
         method:"DELETE",
         headers: {
           "content-type":"application/json"
@@ -77,7 +83,7 @@ const TotalPricecount = (mydata)=>{
 
 
     return (
-        <AuthContext.Provider value={{cartitems,GetCartItems,totalPrice,discountPrice,RemoveClick,NameChange,loginName}} >
+        <AuthContext.Provider value={{cartitems,GetCartItems,totalPrice,discountPrice,RemoveClick,changeAuth,isAuth,ChangeMyname,Myname}} >
             {children}
         </AuthContext.Provider>
     )
