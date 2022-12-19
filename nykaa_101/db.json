@@ -606,6 +606,51 @@
   ],
   "Cart": [
     {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/l/a/lakm_-absolute-blur-perfect-makeup-primer.jpg",
+      "tags": "FEATURED",
+      "name": "Lakme Absolute Blur Perfect Makeup Primer",
+      "price": 750,
+      "discount": 0,
+      "rating": 4.4,
+      "n_ratings": 1405,
+      "n_reviews": 721,
+      "id": 2
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/d/6/d686189KAYBE00000054_2.jpg",
+      "tags": "FEATURED",
+      "name": "Kay Beauty Creme Blush",
+      "price": 799,
+      "discount": 0,
+      "rating": 4.5,
+      "n_ratings": 1022,
+      "n_reviews": 822,
+      "id": 3
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/0/4/04a129c6902395487432__1_.png",
+      "tags": "BESTSELLER      ",
+      "name": "Maybelline New York Instant Age Rewind Eraser Multi-Use Concealer - Medium",
+      "price": 699,
+      "discount": 0,
+      "rating": 4.2,
+      "n_ratings": 29740,
+      "n_reviews": 7730,
+      "id": 5
+    },
+    {
+      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/5/3/536b51b6902395774280_128%20Warm%20Nude_1.jpg",
+      "tags": "BESTSELLER      ",
+      "name": "Maybelline New York Fit Me Concealer",
+      "price": 449,
+      "discount": 10,
+      "rating": 4,
+      "s_price": 499,
+      "n_ratings": 41004,
+      "n_reviews": 2502,
+      "id": 4
+    },
+    {
       "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/n/y/nylagrl000033-a_1.png",
       "tags": "BESTSELLER",
       "name": "L.A. Girl Pro Conceal HD",
@@ -626,17 +671,6 @@
       "n_ratings": 1102,
       "n_reviews": 506,
       "id": 1
-    },
-    {
-      "image_url": "https://images-static.nykaa.com/media/catalog/product/tr:w-200,h-200,cm-pad_resize/l/a/lakm_-absolute-blur-perfect-makeup-primer.jpg",
-      "tags": "FEATURED",
-      "name": "Lakme Absolute Blur Perfect Makeup Primer",
-      "price": 750,
-      "discount": 0,
-      "rating": 4.4,
-      "n_ratings": 1405,
-      "n_reviews": 721,
-      "id": 2
     }
   ]
 }

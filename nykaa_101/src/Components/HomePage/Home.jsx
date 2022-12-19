@@ -6,19 +6,22 @@ import Style from "./Home.module.css"
 import {TopBrands,OnlyAtNykaa,ShortCardData,FeaturedBrands,EverydayEssentials} from "./DataArray";
 import {Cards, ShortCards,ShortCards1} from "./Cards"
 import {SimpleGrid,Divider} from "@chakra-ui/react"
-
+import {useState,useEffect} from "react"
 
 
 const Home =()=>{
+  
+  
 
- 
+
+
+
+// Geting the Data from Cart
+
+
     return(
         <>
-
-
-
-
-      <Navbar />
+      <Navbar   />
       <SubNavbar />
       <div className={Style.main} >
       <div className={Style.CategoryDiv} >
@@ -108,5 +111,6 @@ const Home =()=>{
         
     )
 }
+
 
 export default Home;
