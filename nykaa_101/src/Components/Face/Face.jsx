@@ -8,13 +8,12 @@ import {SimpleGrid,Spinner,SkeletonCircle,SkeletonText,Box} from "@chakra-ui/rea
 import Pagination from "./Pagination";
 import SideBar from "./SideBarMenu";
 import { AuthContext } from "../AuthContext/AuthContext";
+import CarouselComponent from "../GlobalComponent/Corosouls";
+
 
 const Face=()=>{
 
 const {GetCartItems} = useContext(AuthContext)
-
-
-
 
   const [products , setproducts] = useState([]);
   const [Limit , setLimit] = useState(6)
@@ -148,13 +147,15 @@ catch(e){
      <div style={{marginBottom:"40px"}}>
      <Navbar  />
      <SubNavbar />
+     
 
+     
      </div>
     
     <div className={style.MainDiv}>
      <h3 style={{color:"grey",textAlign:"left" , marginLeft:"10vh"}}> Home ❯ Makeup ❯ Face </h3>
      <div style={{width:"100%", textAlign:"center"}}><h2 className={style.heading}>Face Makeup Collection <p style={{color:"grey", fontSize:"17px",fontWeight:"500",display:"inline" }}>(3055)</p></h2></div>
-      <div>COROSOUL</div>
+      <div style={{width:"95%", margin:"auto",marginTop:"5vh", marginBottom:"5vh", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"   }}  ><CarouselComponent /></div>
       <div style={{width:"90%", textAlign:"center", margin:"auto", height:"300px",marginBottom:"4vh"}} ><img style={{height:"100%", width:"100%"}} src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-17/Screenshot%20%283%29_247209.png" alt="myimg" /></div>
      <h1 className={style.heading}  >All Products</h1>
      <div className={style.Container}>
@@ -180,6 +181,8 @@ catch(e){
     <div>
       <Footer />
     </div>
+
+   
     </>
      
   )

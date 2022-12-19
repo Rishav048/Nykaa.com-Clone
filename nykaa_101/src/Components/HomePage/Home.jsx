@@ -1,19 +1,16 @@
 import Navbar from "../Navbar/NavbarFiles/Navbar"
 import SubNavbar from "../Navbar/NavbarFiles/SubNavbar";
 import Footer from "../Footer/Footer";
-import Corousels from "../GlobalComponent/Corosouls";
+import CarouselComponent from "../GlobalComponent/Corosouls";
 import Style from "./Home.module.css"
 import {TopBrands,OnlyAtNykaa,ShortCardData,FeaturedBrands,EverydayEssentials} from "./DataArray";
 import {Cards, ShortCards,ShortCards1} from "./Cards"
 import {SimpleGrid,Divider} from "@chakra-ui/react"
-import {useState,useEffect} from "react"
+
 
 
 const Home =()=>{
   
-  
-
-
 
 
 // Geting the Data from Cart
@@ -27,7 +24,7 @@ const Home =()=>{
       <div className={Style.CategoryDiv} >
       <h1 >Best In Beauty</h1> 
       <h4>Today’s Top Offers</h4>
-      {/* <Corousels /> */}
+      <div style={{width:"95%", margin:"auto",marginTop:"5vh", marginBottom:"5vh", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"   }}  ><CarouselComponent /></div>
       <Divider />
      
       </div>

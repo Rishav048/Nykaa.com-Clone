@@ -8,7 +8,16 @@ export const AuthContext = createContext();
 const AuthContextProvider = ({children})=>{
  const [cartitems , setCartItems] = useState([]);
  const [totalPrice , setTotaLPrice] = useState(0);
- const [discountPrice , setdiscountPrice] = useState(0)
+ const [discountPrice , setdiscountPrice] = useState(0);
+ const [loginName , setLoginName] = useState("Sign In");
+
+
+const NameChange = (val)=>{
+  setLoginName(val)
+}
+
+
+
 
  useEffect(()=>{
     GetCartItems()
@@ -38,12 +47,37 @@ const TotalPricecount = (mydata)=>{
     }
      }
      console.log("totalPrice",totalPrice)
-      console.log("discountPrice",discountPrice)
+     console.log("discountPrice",discountPrice)
 
+   const RemoveClick =(id)=>{
+    RemoveData(id);
+   }
+
+
+
+
+
+   const RemoveData = async(id)=>{
+   try{
+      let res = await fetch(`http://localhost:3000/cart/${id}`,{
+        method:"DELETE",
+        headers: {
+          "content-type":"application/json"
+        },
+      });
+      GetCartItems();
+      let data = await res.json();
+      console.log("Delete Post" , data)
+
+   }
+   catch(e){
+    console.log(e)
+   }
+   }
 
 
     return (
-        <AuthContext.Provider value={{cartitems,GetCartItems,totalPrice,discountPrice}} >
+        <AuthContext.Provider value={{cartitems,GetCartItems,totalPrice,discountPrice,RemoveClick,NameChange,loginName}} >
             {children}
         </AuthContext.Provider>
     )

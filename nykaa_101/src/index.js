@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import {ChakraProvider} from "@chakra-ui/react"
 import { BrowserRouter } from 'react-router-dom';
 import AuthContextProvider from './Components/AuthContext/AuthContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

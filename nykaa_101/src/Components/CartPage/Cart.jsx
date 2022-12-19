@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import {FaWeightHanging} from "@react-icons/all-files/fa/FaWeightHanging"
 import {
     Drawer,
@@ -28,7 +29,12 @@ import {
 const CartDrawer =()=> {
     const { isOpen, onOpen, onClose } = useDisclosure();
     const {cartitems,totalPrice,discountPrice} = useContext(AuthContext)
-  
+    const navigate = useNavigate();
+
+    const MoveToThanks = () => {
+      navigate("/thanks");
+    };
+
     
     return (
       <>
@@ -57,7 +63,7 @@ const CartDrawer =()=> {
             <DrawerBody  >
               {cartitems.map((el)=>(
                 <>
-                <CartCard  src={el.image_url}   name={el.name}   price={el.price}  />
+                <CartCard key={Math.random()*999} id={el.id}   src={el.image_url}   name={el.name}   price={el.price}  />
                 </>
               ))}
 
@@ -82,7 +88,7 @@ const CartDrawer =()=> {
                  <div style={{display:"flex",marginTop:"2vh" ,  height:"60px", justifyContent:"space-between",padding:"25px", fontWeight:"700", fontSize:"20px" }}>
                
                     <div>You Pay</div>
-                    <div>₹ {totalPrice - discountPrice}</div>
+                    <div>₹ {Number(totalPrice) - Number(discountPrice)}</div>
                  </div>
               </div>
               
@@ -94,10 +100,10 @@ const CartDrawer =()=> {
                 Cancel
               </Button>
               <div style={{marginRight:"20vh"}}  >
-              <h2 style={{ fontWeight:"700"}} >₹ {Number(cartitems.reduce((acc,el)=>{return (acc + el.price)},0)) }</h2>
+              <h2 style={{ fontWeight:"700"}} >₹ {Number(totalPrice) - Number(discountPrice)}</h2>
               <h4 style={{marginTop:"-5px", fontWeight:"500"}} >Grand Total</h4>
               </div>
-              <Button colorScheme='pink'>Proceed..</Button>
+              <Button onClick={MoveToThanks} colorScheme='pink'>Proceed..</Button>
              
             </DrawerFooter>
           </DrawerContent>

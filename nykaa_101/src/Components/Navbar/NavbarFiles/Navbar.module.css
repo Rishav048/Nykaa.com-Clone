@@ -27,7 +27,7 @@
 }
 
 .container{
-    border:2px solid blue;
+    border:0px solid blue;
     top:0;
     bottom: 0;
     position: sticky;

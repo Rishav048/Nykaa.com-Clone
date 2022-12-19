@@ -4,6 +4,7 @@ import {SearchIcon} from "@chakra-ui/icons";
 import {ButtonGroup,Button} from "@chakra-ui/react"
 import { Link } from 'react-router-dom';
 import CartDrawer from '../../CartPage/Cart';
+import SignIn from "../../SignInPage/SignIn";
 
 
 const Navbar =()=>{
@@ -60,11 +61,12 @@ const Navbar =()=>{
               />
             </div>
             <div className={style.card2}>
-              <Link to="/SignIn">
+              
             <ButtonGroup gap='2'>
-           <Button colorScheme='pink'>Sign Up</Button>
+           {/* <Button colorScheme='pink'>Sign Up</Button> */}
+           <SignIn />
           </ButtonGroup>
-          </Link>
+          
            
             </div>
             <div className={style.card3}>

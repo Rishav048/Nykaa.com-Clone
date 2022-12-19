@@ -4,6 +4,7 @@ import CartDrawer from "../CartPage/Cart";
 import SignIn from "../SignInPage/SignIn";
 import Payment from "../Payment/Payment";
 import Face from "../Face/Face";
+import Thankx from "../Payment/Thankx";
 
 
 
@@ -14,7 +15,8 @@ const AllRoutes =()=>{
         <Route   path="/cart"  element={< CartDrawer />}   ></Route>
         <Route   path="/signIn"  element={< SignIn />}    ></Route>
         <Route   path="/payment"  element={< Payment />}  ></Route>
-          <Route path="/face" element={<Face />} ></Route>
+         <Route path="/face" element={<Face />} ></Route>
+         <Route path="/thanks" element={<Thankx />} ></Route>
        </Routes>
     )
 }
