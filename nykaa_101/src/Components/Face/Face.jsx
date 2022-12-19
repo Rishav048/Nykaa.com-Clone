@@ -1,21 +1,46 @@
 import { ProductCard } from "./ProductCard"
-import Corousels from "../GlobalComponent/Corosouls"
+import Navbar from "../Navbar/NavbarFiles/Navbar"
+import SubNavbar from "../Navbar/NavbarFiles/SubNavbar";
+import Footer from "../Footer/Footer";
 import style from "./Face.module.css"
-import { useState, useEffect} from "react"
+import { useState, useEffect,useContext} from "react"
 import {SimpleGrid,Spinner,SkeletonCircle,SkeletonText,Box} from "@chakra-ui/react";
 import Pagination from "./Pagination";
+import SideBar from "./SideBarMenu";
+import { AuthContext } from "../AuthContext/AuthContext";
+import CarouselComponent from "../GlobalComponent/Corosouls";
+
 
 const Face=()=>{
+
+const {GetCartItems} = useContext(AuthContext)
 
   const [products , setproducts] = useState([]);
   const [Limit , setLimit] = useState(6)
   const [page , setpage] = useState(1);
   const [totalpage , settotalpage] = useState(0);
   const [loading , setLoading] = useState(false);
-  const [cartItems , setCartItems] = useState([]);
+  const [sorting , setsorting] = useState("");
+  const [sortAccording , setsortAccording] = useState("");
+  
+
+  const handlePriceSorting =(val)=>{
+    console.log(val)
+    setsortAccording("price")
+    setsorting(val)
+  }
+
+  const handleRatingSorting=(val)=>{
+    setsortAccording("n_ratings");
+    setsorting(val);
+  }
+
+
  
   const addedTocart =(item)=>{
+    console.log(item)
     postData(item)
+   
   }
 // For adding the data to CART
 const postData= async(item)=>{
@@ -26,16 +51,17 @@ try{
     headers:{
       "content-type":"application/json"
     }
-  })
+  });
+
+  let data = await res.json();
+  
+  GetCartItems()
+
 }
 catch(e){
   console.log(e)
 }
 }
-
-
-
-
 
 //For changing the limit;
   const handleLimit = (Limit)=>{
@@ -58,13 +84,13 @@ catch(e){
 
   useEffect(()=>{
     GetData();
-    ForTotalpage()
-  },[page,Limit])
+    ForTotalpage();
+  },[page,Limit,sorting])
 
   const GetData = async()=>{
  try{
   setLoading(true)
-   let res = await fetch(`http://localhost:3000/products?_page=${page}&_limit=${Limit}`);
+   let res = await fetch(`http://localhost:3000/products?_page=${page}&_limit=${Limit}&_sort=${sortAccording}&_order=${sorting}`);
    let data = await res.json();
 
    console.log(data)
@@ -77,6 +103,11 @@ catch(e){
   setLoading(false)
  }
   }
+
+
+
+
+//Fetching all the data for the TotalPage
 
   const ForTotalpage = async()=>{
     try{
@@ -112,15 +143,27 @@ catch(e){
 </Box>
 
 :
+     <>
+     <div style={{marginBottom:"40px"}}>
+     <Navbar  />
+     <SubNavbar />
+     
+
+     
+     </div>
+    
     <div className={style.MainDiv}>
      <h3 style={{color:"grey",textAlign:"left" , marginLeft:"10vh"}}> Home ❯ Makeup ❯ Face </h3>
      <div style={{width:"100%", textAlign:"center"}}><h2 className={style.heading}>Face Makeup Collection <p style={{color:"grey", fontSize:"17px",fontWeight:"500",display:"inline" }}>(3055)</p></h2></div>
-      <div>COROSOUL</div>
+      <div style={{width:"95%", margin:"auto",marginTop:"5vh", marginBottom:"5vh", boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px"   }}  ><CarouselComponent /></div>
       <div style={{width:"90%", textAlign:"center", margin:"auto", height:"300px",marginBottom:"4vh"}} ><img style={{height:"100%", width:"100%"}} src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-17/Screenshot%20%283%29_247209.png" alt="myimg" /></div>
      <h1 className={style.heading}  >All Products</h1>
      <div className={style.Container}>
       <div className={style.sidediv}>
-        <div className={style.fixedsidediv}></div>
+        <div className={style.fixedsidediv}>
+          <SideBar handlePriceSorting={handlePriceSorting} handleRatingSorting={handleRatingSorting}    />
+        </div>
+        <img style={{width:"100%",height:"400px"}}  src="https://adn-static1.nykaa.com/media/categoryInfo/image_in_list/13_61eed1ba6786c_gramroundup-celebrity-inspiredholidaylookswe_restealingfromtheirinstagrampagedt.jpg" alt="oic" />
       </div>
       <div className={style.productdiv}>
 
@@ -132,8 +175,15 @@ catch(e){
       
       <Pagination  page={page}  totalpage={totalpage}  changePage={changePage} handleLimit={handleLimit} Limit={Limit} />
       </div>
+      
      </div>
     </div>
+    <div>
+      <Footer />
+    </div>
+
+   
+    </>
      
   )
       

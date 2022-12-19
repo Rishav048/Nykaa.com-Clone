@@ -1,37 +1,50 @@
-import {useState} from "react"
 
+import Carousel from 'react-bootstrap/Carousel';
 
-const Corousels =()=>{
-     const [image , setImage] = useState(0)
+function CarouselComponent() {
+  return (
+    <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-static.nykaa.com/uploads/5a7cbd36-14ac-499d-967a-2bd693a4f3da.jpg?tr=w-1200,cm-pad_resize"
+          alt="First slide"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-static.nykaa.com/uploads/52562738-b7fc-4783-840b-fb46a0dad458.jpg?tr=w-1200,cm-pad_resize"
+          alt="Second slide"
+        />
 
-     const imageArr = [`https://images-static.nykaa.com/uploads/42f8176c-8ca3-43e1-991a-32dfa4ca16f7.jpg?tr=w-1200,cm-pad_resize`,`https://images-static.nykaa.com/uploads/aa5a6aa1-6cc9-47ec-b31e-cd96e48dd5f5.jpg?tr=w-1200,cm-pad_resize`]
-    
-    
-     console.log(imageArr.length)
-    
-    setInterval(function(){
-        
-       if(image === imageArr.length -1){
-        setImage(0)
-       }
-    
-        setImage((prev)=>(prev + 1))
-    
-    },2000)
-    
-    
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src="https://images-static.nykaa.com/uploads/83014540-e58e-4f8d-bd76-8772dd6cbf74.jpg?tr=w-1200,cm-pad_resize"
+          alt="Third slide"
+        />
 
-
-    return (
-
-
-      <div  style={{width:"100%" , height:"300px" , border:"2px solid red" , marginTop:"10px" }} >
-
-        <img  style={{width:"100%" , height:"100%"}}   src={imageArr[image]} alt="Slider Image" />
-
-      </div>
-
-    )
+      </Carousel.Item>
+    </Carousel>
+  );
 }
 
-export default Corousels;
+export default CarouselComponent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+

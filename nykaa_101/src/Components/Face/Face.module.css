@@ -2,7 +2,7 @@
 .MainDiv{
     width: 100%;
     height: auto ;
-    border: 1px solid red;
+    border: 0px solid red;
     background-color:#f3f3f3;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .Container{
-    border: 2px solid blueviolet;
+    border: 0px solid blueviolet;
     height: auto;
     width: 90%;
     margin: auto;
@@ -27,18 +27,20 @@
 .sidediv{
   flex: 3;
   height: 100%;
-  border: 1px solid red;
+  border: 0px solid red;
 }
 
 .productdiv{
     flex: 7;
     height: 100%;
-    border: 1px solid yellowgreen;
+    border: 0px solid yellowgreen;
+    
    
 }
 
 .fixedsidediv{
     height: 800px;
     width: 100%;
-    background-color: aqua;
+    background-color: #f3f3f3;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }

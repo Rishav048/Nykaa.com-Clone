@@ -2,6 +2,8 @@ import { useState } from "react";
 import styles from "./ProductCard.module.css"
 //import Rating from "@mui/material/Rating";
 import {Stack} from "@chakra-ui/react";
+import { Toastadded } from "./Toast_addTocart";
+
 
 
 const  ProductCard =({tags,image_url,name,price,discount,rating,n_ratings,addedTocart,id,obj})=>{
@@ -48,7 +50,7 @@ const  ProductCard =({tags,image_url,name,price,discount,rating,n_ratings,addedT
             style={{
               display: "flex",
               justifyContent: "center",
-              marginTop: "-30px",
+              marginTop: "-20px",
               border:"0px solid red"
             }}
           >
@@ -75,7 +77,7 @@ const  ProductCard =({tags,image_url,name,price,discount,rating,n_ratings,addedT
                 display:"inline"
               }}
             >
-              ( {n_ratings} )
+              ( Rating : {n_ratings} )
             </p>
             
           </Stack>
@@ -96,9 +98,10 @@ const  ProductCard =({tags,image_url,name,price,discount,rating,n_ratings,addedT
               alignItems: "center",
             }}
           >
-            <h3 style={{}} >Add To Bag</h3>
+           <Toastadded  />
           </div>
         </div>
+        
         </div>
     </div>
   );
