@@ -1,6 +1,9 @@
 # rustic-bone-9818
 RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMIC + 
 
+![alt text](https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-14/LOGO_Cosmetic%2B_677836.png)
+
+
 
 Nykaa (COSMIC + ) is an Indian e-commerce Mumbai-based retail seller of beauty, fashion and wellness products. The ecommerce startup lists products from over 1200 global brands along with its own line of products Nykaa Cosmetics and Nykaa Naturals.It sells beauty,wellness and fashion product across website,mobile apps and 76 offline store.
 
@@ -28,4 +31,3 @@ User can add the product to Cart by click on the add to cart button which will b
 User can remove the product from the cart by clicking on remove icon.
 In product page paggination feature is available so that user can easily navigate from one page to another page.
 User can set the products limit from the below input.(max - 12 and min - 3), if u go beyond it it will reset the products to 6/page.
-
