@@ -8,7 +8,7 @@
 Nykaa **(COSMETICS +)** is an Indian e-commerce company, founded by Falguni Nayar in 2012 and headquartered in Mumbai. It sells beauty, wellness and fashion products across websites, mobile apps and 100+ offline stores. In 2020, it became the first Indian unicorn startup headed by a woman.
 
 
-**TechStacks I have used**
+## TechStacks I have used
 * React.js
 * HTML
 * CSS
@@ -19,7 +19,7 @@ Nykaa **(COSMETICS +)** is an Indian e-commerce company, founded by Falguni Naya
 
 
 
-**Features**
+## Features
 
 * There is SignUp and login functionality.
 * User will login and can see his name on the navbar.
