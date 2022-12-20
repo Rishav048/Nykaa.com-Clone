@@ -1,5 +1,6 @@
-# rustic-bone-9818
-RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMIC + 
+ 
+# RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMIC + 
+ rustic-bone-9818
 
 ![alt text](https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-14/LOGO_Cosmetic%2B_677836.png)
 
