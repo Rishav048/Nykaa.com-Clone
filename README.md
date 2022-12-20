@@ -1,11 +1,11 @@
  
-# RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMETIC + 
+# RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMETICS + 
  rustic-bone-9818
 
 ![alt text](https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-14/LOGO_Cosmetic%2B_677836.png)
 
 
-Nykaa **(COSMETIC +)** is an Indian e-commerce company, founded by Falguni Nayar in 2012 and headquartered in Mumbai. It sells beauty, wellness and fashion products across websites, mobile apps and 100+ offline stores. In 2020, it became the first Indian unicorn startup headed by a woman.
+Nykaa **(COSMETICS +)** is an Indian e-commerce company, founded by Falguni Nayar in 2012 and headquartered in Mumbai. It sells beauty, wellness and fashion products across websites, mobile apps and 100+ offline stores. In 2020, it became the first Indian unicorn startup headed by a woman.
 
 
 **TechStacks I have used**
