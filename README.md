@@ -1,12 +1,12 @@
  
-# RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMIC + 
+# RCT101 Project (Nykaa.com Clone)  ---->  renamed as COSMETIC + 
  rustic-bone-9818
 
 ![alt text](https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-14/LOGO_Cosmetic%2B_677836.png)
 
 
 
-Nykaa (COSMIC + ) is an Indian e-commerce Mumbai-based retail seller of beauty, fashion and wellness products. The ecommerce startup lists products from over 1200 global brands along with its own line of products Nykaa Cosmetics and Nykaa Naturals.It sells beauty,wellness and fashion product across website,mobile apps and 76 offline store.
+Nykaa **(COSMETIC +)** is an Indian e-commerce Mumbai-based retail seller of beauty, fashion and wellness products. The ecommerce startup lists products from over 1200 global brands along with its own line of products Nykaa Cosmetics and Nykaa Naturals.It sells beauty,wellness and fashion product across website,mobile apps and 76 offline store.
 
 
 
